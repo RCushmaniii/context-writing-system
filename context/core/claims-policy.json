@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "id": "claims-policy",
+    "version": "1.0.0",
+    "updated": "2025-12-20"
+  },
+  "rules": {
+    "claims_ladder": [
+      {
+        "level": 1,
+        "name": "Verified",
+        "allowed": "Facts provably true today.",
+        "examples": [
+          "17 years Fortune 500 IT leadership",
+          "5 years US-based IT consulting (Kodak, Corning)",
+          "8 years profitable solopreneur",
+          "5-star Google Business Profile rating (coaching)",
+          "Published testimonials (coaching)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Designed",
+        "allowed": "What we implement or design for, without guarantees.",
+        "language": ["designed to", "built with", "includes", "we implement", "we validate", "we document"],
+        "examples": [
+          "Built with guardrails and human handoff.",
+          "Designed for minimal website footprint.",
+          "We document data handling before launch."
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Targets",
+        "allowed": "Goals only if paired with measurement.",
+        "language": ["aim", "target", "we measure", "we iterate"],
+        "examples": [
+          "We aim to reduce repetitive tickets and measure deflection over time."
+        ]
+      }
+    ],
+    "banned_absolutes": [
+      "no hallucinations",
+      "guaranteed",
+      "no data leaks",
+      "will not slow down your website",
+      "always accurate",
+      "perfect security",
+      "100%"
+    ],
+    "safe_replacements": {
+      "accuracy": [
+        "guardrails for accuracy",
+        "source-grounded answers",
+        "human handoff when uncertain",
+        "evaluation and iteration"
+      ],
+      "security_privacy": [
+        "privacy-aware design",
+        "least-privilege access",
+        "clear data boundaries",
+        "documented data handling",
+        "access controls appropriate to the deployment"
+      ],
+      "performance_seo": [
+        "minimal footprint approach",
+        "performance-conscious deployment",
+        "we validate page speed",
+        "dedicated page if embed is heavy"
+      ],
+      "timelines": ["typical range", "depends on scope", "v1 in X–Y weeks in most cases"],
+      "pricing": [
+        "pricing is provided after the Clarity Sprint",
+        "fixed-scope proposal after scoping"
+      ]
+    },
+    "metrics_policy": {
+      "no_invented_numbers": true,
+      "allowed": [
+        "propose metrics to track (time-to-answer, deflection rate, booked calls)",
+        "tie outcomes to measurement + iteration"
+      ]
+    }
+  },
+  "preflight_checklist": [
+    "Remove absolute guarantees.",
+    "Remove invented tools/implementations; reframe as 'we implement' if needed.",
+    "Remove invented numbers or ROI claims.",
+    "Rephrase security/performance certainty into designed/validated language.",
+    "Use only approved proof points."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "primary_audience": "Mexico and LATAM SMB founders and operations leaders who are overwhelmed by repeat customer questions and scattered internal knowledge, and need a practical, bilingual AI assistant that reduces support load and captures more qualified leads.",
+
+  "who_they_are": [
+    "Small-to-mid-sized businesses (approximately 10–200 employees, typically USD 1M–50M in annual revenue) with growing customer volume but immature or informal knowledge operations.",
+    "Service-heavy and information-heavy businesses such as B2B services, logistics, industrial distributors, SaaS and IT services, e-commerce operations, and professional services.",
+    "Founder, General Manager, or Operations / Customer Support leader responsible for both revenue outcomes and operational efficiency (support costs, pipeline health, onboarding, internal enablement).",
+    "Mexico-first or broader LATAM companies, often serving U.S. customers or operating cross-border. Bilingual context matters, especially for teams interacting with international clients, vendors, or partners.",
+    "Not AI-native, but generally comfortable with tools like CRM systems, helpdesks, Google Workspace, Microsoft Teams, or similar. Teams are lean, with limited engineering bandwidth (often 0–5 developers) and high operational load concentrated on a few people."
+  ],
+
+  "ideal_customer_qualifiers": [
+    "Has at least one English-speaking stakeholder (Ops, Sales, or IT lead) who can coordinate the project, or agrees to a bilingual partner add-on for Spanish-first project management.",
+    "Willing to run project delivery in English for speed and clarity, with the understanding that assistant outputs can be fully bilingual (EN/ES).",
+    "Strong bonus fit if the business serves U.S. or Canadian customers, vendors, or partners and already operates in a partially bilingual environment."
+  ],
+
+  "not_a_fit": [
+    "Spanish-only teams with no English-speaking champion and no willingness to use a bilingual partner add-on.",
+    "Organizations that require Spanish-only project delivery across meetings, documentation, and implementation coordination.",
+    "Businesses with no cross-border exposure and no practical need for English or bilingual customer communication."
+  ],
+
+  "pains": [
+    "Support is consuming the business. The same questions repeat daily (pricing, order status, policies, how-to guidance), responses are slow or inconsistent, and customers become frustrated.",
+    "Knowledge is scattered and tribal. Answers live in WhatsApp threads, Google Docs, PDFs, inboxes, or with one person on the team. Onboarding new hires is slow and painful.",
+    "Leads leak after hours. Prospects visit the website, ask questions, then disappear because no one responds fast enough, especially nights and weekends.",
+    "Small team with no bandwidth. They cannot spare engineers or operations staff to own a large or complex AI project; they need something that works without becoming another full-time job.",
+    "Burned by past tools. They fear paying for a bot that sounds unintelligent, hallucinates answers, or creates more support tickets than it resolves.",
+    "Lack of visibility into what is broken. They cannot clearly see which questions repeat, where customers get stuck, or what content is missing, so problems persist.",
+    "Cost pressure and reputation risk. Every missed message risks revenue, and every wrong answer risks trust, churn, or public complaints."
+  ],
+
+  "desired_outcomes": [
+    "Fewer repetitive support tickets and faster responses, with instant answers for common questions and clean handoff to humans when needed.",
+    "More booked calls and better-qualified leads, especially from after-hours website visitors.",
+    "A single source of truth for business knowledge, so answers are consistent across people and channels.",
+    "Shorter onboarding time and reduced dependency on key individuals who currently hold critical knowledge.",
+    "Clear visibility into customer questions and friction points through analytics that drive operational and content improvements.",
+    "Higher customer satisfaction and trust through consistent, accurate, and professional bilingual support.",
+    "Peace of mind knowing the system will not hallucinate, harm website performance, or require constant babysitting."
+  ],
+
+  "objections": [
+    "This sounds expensive or not in the budget right now. They worry it is priced for enterprise, not SMBs.",
+    "We do not have time or people to implement this. They fear a long project with heavy meeting load or engineering requirements.",
+    "What if it gives wrong answers and hurts our reputation? Concerns about hallucinations, inconsistent responses, or tone issues.",
+    "Our data is sensitive. How do we know it is secure? Worries about privacy, access control, and data leaks.",
+    "We tried a chatbot before and it was useless. Past experiences with scripted bots, poor adoption, or vendors who disappeared after launch.",
+    "Will this slow down our website or break our funnel? Performance and SEO concerns, especially with embedded widgets.",
+    "Can we not just use ChatGPT, Intercom, Zendesk, or a cheaper freelancer? They assume generic tools are good enough or that DIY is simpler.",
+    "We do not have anyone who can run this in English. Concern about language barriers in project coordination."
+  ],
+
+  "buying_triggers": [
+    "Support backlog reaches a breaking point, with response times spiking or customer complaints increasing.",
+    "A sudden growth surge from a product launch, marketing campaign, or expansion overwhelms the existing team.",
+    "They lose or nearly lose a significant deal because questions were not answered quickly enough.",
+    "Key person dependency becomes risky when the one person who knows everything leaves, takes vacation, or gets overloaded.",
+    "Leadership mandates automation and efficiency, with pressure to scale operations without adding headcount.",
+    "Expansion into new markets or channels introduces English-speaking or cross-border customers who expect fast, consistent responses.",
+    "A new budget window opens at the start of a quarter or after leadership realizes support inefficiencies are costing revenue."
+  ],
+
+  "language_they_use": [
+    "Support is killing us",
+    "We answer the same questions all day",
+    "Everything lives in WhatsApp",
+    "We cannot scale like this",
+    "We do not want another tool to manage",
+    "We tried a chatbot and it failed",
+    "We need something reliable, not flashy"
+  ]
+}

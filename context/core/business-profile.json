@@ -1,0 +1,43 @@
+{
+  "business_name": "CushLabs.ai",
+
+  "positioning": "CushLabs.ai is a practical AI engineering studio that turns messy business knowledge and repetitive customer questions into secure, production-grade assistants that reduce support load and improve lead handling—without AI hype or fragile demos. Bilingual customer experiences (EN/ES) with English-first execution for implementation.",
+
+  "delivery_model": "English-first project execution for speed and clarity. Bilingual (EN/ES) assistant outputs fully supported. Spanish-first clients can be supported via a bilingual partner add-on (PM or solutions consultant).",
+
+  "offers": [
+    "Clarity Sprint (5–10 days): Convert an ambiguous AI idea into a buildable plan. Deliverables include prioritized use cases, success metrics, knowledge and data audit, v1 scope, architecture outline, and an implementation roadmap.",
+    "RAG Assistant Build + Launch (3–6 weeks): Design and deploy a production-grade AI assistant with knowledge ingestion, retrieval tuning, guardrails, analytics, and human handoff flows. Bilingual outputs supported when needed.",
+    "Website Lead-Conversion Assistant (2–4 weeks): A sales-focused assistant that addresses common objections, qualifies visitors, captures contact information, and routes prospects to the appropriate CTA. Designed with performance and SEO considerations.",
+    "Internal Knowledge Search Copilot (3–6 weeks): A private internal assistant for teams to search policies, SOPs, product documentation, and onboarding materials. Includes role-based access, auditability, and source-referenced outputs.",
+    "Optimization and AI Ops Retainer (monthly): Ongoing evaluation, knowledge refresh, retrieval improvements, workflow enhancements, monitoring, and reporting aligned to agreed KPIs such as deflection rate, conversion signals, and response time."
+  ],
+
+  "proof": [
+    "17 years of Fortune 500 IT leadership experience as an IT Manager, with responsibility for systems, stakeholders, and operational accountability.",
+    "5 years of U.S.-based IT consulting, including on-site work with enterprise customers such as Kodak and Corning.",
+    "8 years as a profitable solopreneur, demonstrating sustained independent business performance over time.",
+    "Premium pricing track record, growing hourly rates from MXN 150 to MXN 500 over eight years.",
+    "5-star Google Business Profile rating for a professional coaching business.",
+    "Multiple customer testimonials published on owned websites.",
+    "Established professional network with 500+ LinkedIn connections and endorsements."
+  ],
+
+  "differentiators": [
+    "Clarity-first methodology: define the decision, use case, success metrics, and scope before selecting tools or building systems.",
+    "Production-grade engineering discipline: secure-by-default architecture, validation, logging, testing, and maintainable code.",
+    "Outcome-oriented systems rather than one-off demos, with analytics and iteration loops tied to business signals.",
+    "Respect for performance and user experience, especially on marketing sites, using light-footprint deployment patterns.",
+    "Cross-border readiness for Mexico and LATAM teams serving U.S. and Canadian customers, with bilingual assistant outputs.",
+    "Enterprise IT governance mindset combined with solopreneur speed and direct accountability.",
+    "Explicit refusal of hype-driven AI, fragile prompt setups, and hallucination-prone knowledge systems."
+  ],
+
+  "non_ideal_fit": [
+    "Teams looking for a cheap chatbot widget with no strategy or governance.",
+    "Organizations expecting guaranteed ROI or fully autonomous AI with no human oversight.",
+    "Projects that cannot provide any English-speaking point of contact for coordination."
+  ],
+
+  "cta": "Book a free 20-minute Clarity Call to diagnose your situation and determine next steps. No commitment."
+}
