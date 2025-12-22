@@ -83,6 +83,8 @@ Run these once to teach the system who you are:
    - Paste into your AI chat
    - Save output to: `/context/core/business-profile.json`
 
+### 2. /docs/
+
 ### 3. Activate
 
 Point your AI assistant to **`CLAUDE.md`**  

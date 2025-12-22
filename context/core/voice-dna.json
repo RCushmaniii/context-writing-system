@@ -227,10 +227,10 @@
       ],
       
       "avoid_confidence_language": [
-        "I guarantee X" (too absolute, sets up failure)",
-        "17 years in enterprise IT so I know everything" (technology changes too fast—this sounds out of touch)",
-        "Trust me, this will work" (empty claim without proof)",
-        "I'm the best at this" (arrogant, especially to Mexican clients)"
+        "I guarantee X (too absolute, sets up failure)",
+        "17 years in enterprise IT so I know everything (technology changes too fast—this sounds out of touch)",
+        "Trust me, this will work (empty claim without proof)",
+        "I'm the best at this (arrogant, especially to Mexican clients)"
       ],
       
       "handling_uncertainty": {

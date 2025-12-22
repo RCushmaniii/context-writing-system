@@ -9,6 +9,7 @@ Each layer has a clear responsibility and strict boundaries.
 
 /CLAUDE.md # System rules, workflow, priorities
 /STRUCTURE.md # This file (authoritative structure)
+/README.md # Quick start guide
 
 ---
 
