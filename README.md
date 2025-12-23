@@ -4,7 +4,7 @@
 Built to enforce voice, audience, business truth, and claims discipline — at scale.
 
 Live System Explorer:
-👉 [https://vercel.com/rcushmaniii-projects/cushlabs-writing-system](https://vercel.com/rcushmaniii-projects/cushlabs-writing-system)
+👉 [CushLabs.ai Writing System](https://cushlabs-writing-system.vercel.app/)
 
 ---
 
