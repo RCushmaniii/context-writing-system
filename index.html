@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing System</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/index.html" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="content-text">
+        <h1 class="mt-0">Writing System</h1>
+
+        <p class="lead">
+          A structured framework for consistent, authentic, and factually accurate content generation.
+        </p>
+
+        <hr>
+
+        <h2>What This System Does</h2>
+
+        <p>
+          This writing system prevents the most common failures in AI-generated content:
+        </p>
+
+        <ul>
+          <li><strong>Generic voice</strong> — Every business sounds the same</li>
+          <li><strong>Invented claims</strong> — AI hallucinates offers, pricing, or proof points</li>
+          <li><strong>Inconsistent messaging</strong> — Different assets contradict each other</li>
+          <li><strong>Format drift</strong> — Structure degrades over time</li>
+        </ul>
+
+        <p>
+          It does this by separating <strong>what to say</strong> (context) from <strong>how to say it</strong> (skills),
+          and enforcing both through structured prompts and validation.
+        </p>
+
+        <hr>
+
+        <h2>Core Components</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/viewer-context/index.html">Context Profiles</a>
+            </h3>
+            <p>
+              Structured JSON files that define voice DNA, ideal client profile, business offers, and claims constraints.
+              These are the single source of truth for all content.
+            </p>
+            <p class="text-muted">
+              <strong>Files:</strong> voice-dna.json, icp.json, business-profile.json, claims-policy.json
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/viewer-prompts/index.html">Creator Prompts</a>
+            </h3>
+            <p>
+              Structured interview prompts that extract context from the business owner.
+              These define how truth enters the system.
+            </p>
+            <p class="text-muted">
+              <strong>Output:</strong> Context JSON files
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/viewer-skills/index.html">Content Skills</a>
+            </h3>
+            <p>
+              Format-specific expertise packages for landing pages, emails, case studies, social posts, and more.
+              Skills define structure and strategy—not voice or claims.
+            </p>
+            <p class="text-muted">
+              <strong>Input:</strong> Context + topic → <strong>Output:</strong> Formatted content
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/viewer-knowledge/index.html">Knowledge Base</a>
+            </h3>
+            <p>
+              Reference content, templates, and examples organized by trust level.
+              Gold-standard content is safe to imitate; drafts require verification.
+            </p>
+            <p class="text-muted">
+              <strong>Categories:</strong> Gold-standard, templates, drafts, notes
+            </p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2>How It Works</h2>
+
+        <ol>
+          <li><strong>Extract context</strong> — Run creator prompts to build context profiles</li>
+          <li><strong>Select skill</strong> — Choose the content type you need (landing page, email, etc.)</li>
+          <li><strong>Provide topic</strong> — Specify what you want to write about</li>
+          <li><strong>Generate content</strong> — Skill loads context and produces structured output</li>
+          <li><strong>Validate quality</strong> — Preflight checks ensure accuracy and consistency</li>
+        </ol>
+
+        <p>
+          Context is authored once and reused across all content types.
+          Skills ensure format consistency without reinventing voice or claims.
+        </p>
+
+        <hr>
+
+        <h2>Key Principles</h2>
+
+        <ul>
+          <li><strong>Context over prompts</strong> — Truth lives in structured files, not ad-hoc instructions</li>
+          <li><strong>Separation of concerns</strong> — Voice, audience, offers, and format are independent</li>
+          <li><strong>Single source of truth</strong> — Context files are canonical; everything else derives from them</li>
+          <li><strong>Explicit constraints</strong> — What not to say is as important as what to say</li>
+          <li><strong>Validation over trust</strong> — Preflight checks catch errors before publishing</li>
+        </ul>
+
+        <hr>
+
+        <h2>Get Started</h2>
+
+        <p>
+          <a href="/system/index.html"><strong>Read the system overview</strong></a> to understand the architecture and workflow.
+        </p>
+
+        <p>
+          <a href="/viewer-context/index.html"><strong>Explore context profiles</strong></a> to see how voice, audience, and offers are structured.
+        </p>
+
+        <p>
+          <a href="/viewer-prompts/index.html"><strong>Review creator prompts</strong></a> to learn how context is extracted.
+        </p>
+
+        <p>
+          <a href="/viewer-skills/index.html"><strong>Browse content skills</strong></a> to see available content types.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/common.js"></script>
+</body>
+</html>

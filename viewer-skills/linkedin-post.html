@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cold Email - Writing System Explorer</title>
+  <title>LinkedIn Post - Writing System Explorer</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -11,13 +11,13 @@
     <!-- Top Navigation -->
     <nav class="top-nav">
       <div class="top-nav-inner">
-        <a href="/" class="nav-brand">Writing System</a>
+        <a href="/index.html" class="nav-brand">Writing System</a>
         <ul class="nav-links">
           <li><a href="/system/index.html">System</a></li>
-          <li><a href="/context/index.html">Context</a></li>
-          <li><a href="/prompts/index.html">Prompts</a></li>
-          <li><a href="/skills/index.html">Skills</a></li>
-          <li><a href="/knowledge/index.html">Knowledge</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
         </ul>
       </div>
     </nav>
@@ -26,19 +26,19 @@
     <div class="breadcrumbs">
       <div class="breadcrumbs-inner">
         <ol>
-          <li><a href="/">Home</a></li>
-          <li><a href="/skills/index.html">Skills</a></li>
-          <li>Cold Email</li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li>LinkedIn Post</li>
         </ol>
       </div>
     </div>
 
     <!-- Main Content -->
     <main class="main-content">
-      <h1 class="mt-0">Cold Email Skill</h1>
+      <h1 class="mt-0">LinkedIn Post Skill</h1>
 
       <p class="text-muted">
-        Outbound sales email with personalization, value prop, and clear CTA.
+        Social content for LinkedIn feed with hook, structure, and formatting rules.
       </p>
 
       <div id="file-meta-container"></div>
@@ -63,12 +63,12 @@
       // Display file metadata
       const metaContainer = document.getElementById('file-meta-container');
       metaContainer.innerHTML = WritingSystem.createFileMeta({
-        path: '/skills/cold-email/cold-email.md',
+        path: '/skills/linkedin-post/linkedin-post.md',
         trust: 'reference'
       });
 
       // Render the Markdown content
-      await WritingSystem.renderMarkdown('/skills/cold-email/cold-email.md', 'content');
+      await WritingSystem.renderMarkdown('/skills/linkedin-post/linkedin-post.md', 'content');
     });
   </script>
 </body>

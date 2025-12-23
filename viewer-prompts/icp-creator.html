@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice DNA Creator - Writing System Explorer</title>
+  <title>ICP Creator - Writing System Explorer</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -11,13 +11,13 @@
     <!-- Top Navigation -->
     <nav class="top-nav">
       <div class="top-nav-inner">
-        <a href="/" class="nav-brand">Writing System</a>
+        <a href="/index.html" class="nav-brand">Writing System</a>
         <ul class="nav-links">
           <li><a href="/system/index.html">System</a></li>
-          <li><a href="/context/index.html">Context</a></li>
-          <li><a href="/prompts/index.html">Prompts</a></li>
-          <li><a href="/skills/index.html">Skills</a></li>
-          <li><a href="/knowledge/index.html">Knowledge</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
         </ul>
       </div>
     </nav>
@@ -26,9 +26,9 @@
     <nav class="secondary-nav">
       <div class="secondary-nav-inner">
         <ul>
-          <li><a href="/prompts/voice-dna-creator.html">Voice DNA Creator</a></li>
-          <li><a href="/prompts/icp-creator.html">ICP Creator</a></li>
-          <li><a href="/prompts/business-profile-creator.html">Business Profile Creator</a></li>
+          <li><a href="/viewer-prompts/voice-dna-creator.html">Voice DNA Creator</a></li>
+          <li><a href="/viewer-prompts/icp-creator.html">ICP Creator</a></li>
+          <li><a href="/viewer-prompts/business-profile-creator.html">Business Profile Creator</a></li>
         </ul>
       </div>
     </nav>
@@ -37,44 +37,45 @@
     <div class="breadcrumbs">
       <div class="breadcrumbs-inner">
         <ol>
-          <li><a href="/">Home</a></li>
-          <li><a href="/prompts/index.html">Prompts</a></li>
-          <li>Voice DNA Creator</li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li>ICP Creator</li>
         </ol>
       </div>
     </div>
 
     <!-- Main Content -->
     <main class="main-content">
-      <h1 class="mt-0">Voice DNA Creator</h1>
+      <h1 class="mt-0">ICP Creator</h1>
 
       <p class="text-muted">
-        Structured interview prompt that extracts tone, rhythm, and distinctive language patterns to generate <code>voice-dna.json</code>.
+        Structured interview prompt that captures audience intelligence to generate <code>icp.json</code>.
       </p>
 
       <div id="file-meta-container"></div>
 
       <h2>Purpose</h2>
       <p>
-        This prompt guides a conversation designed to capture how the business sounds — the distinctive patterns that make content recognizable as "yours," not generic AI output.
+        This prompt guides a conversation designed to extract deep audience understanding — the pains, language, objections, and cultural context that prevent generic marketing speak.
       </p>
 
       <h2>Expected Output</h2>
       <p>
-        A complete <code>voice-dna.json</code> file containing:
+        A complete <code>icp.json</code> file containing:
       </p>
       <ul>
-        <li>Core tone and attitude</li>
-        <li>Sentence rhythm and structure preferences</li>
-        <li>Distinctive phrases and words to favor</li>
-        <li>Explicit boundaries (what never to say)</li>
-        <li>Punctuation and formatting style</li>
+        <li>Primary audience definition and geographic segments</li>
+        <li>Core pains and desired outcomes</li>
+        <li>Language the audience actually uses (often bilingual)</li>
+        <li>Jargon to avoid and plain language alternatives</li>
+        <li>Objections and validated rebuttals</li>
+        <li>Buying triggers and ideal customer signals</li>
       </ul>
 
       <h2>Related Files</h2>
       <ul>
-        <li><a href="/context/voice-dna.html">View the Voice DNA context file →</a></li>
-        <li><a href="/docs/voice-dna-info.html">Read the Voice DNA documentation →</a></li>
+        <li><a href="/viewer-context/icp.html">View the ICP context file →</a></li>
+        <li><a href="/viewer-docs/icp-info.html">Read the ICP documentation →</a></li>
       </ul>
 
       <hr>
@@ -98,12 +99,12 @@
       // Display file metadata
       const metaContainer = document.getElementById('file-meta-container');
       metaContainer.innerHTML = WritingSystem.createFileMeta({
-        path: '/prompts/voice-dna-creator.md',
+        path: '/prompts/icp-creator.md',
         trust: 'reference'
       });
 
       // Render the Markdown content
-      await WritingSystem.renderMarkdown('/prompts/voice-dna-creator.md', 'content');
+      await WritingSystem.renderMarkdown('/prompts/icp-creator.md', 'content');
     });
   </script>
 </body>

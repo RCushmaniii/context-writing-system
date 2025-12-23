@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ideal Client Profile - Writing System Explorer</title>
+  <title>Claims Policy - Writing System Explorer</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -11,13 +11,13 @@
     <!-- Top Navigation -->
     <nav class="top-nav">
       <div class="top-nav-inner">
-        <a href="/" class="nav-brand">Writing System</a>
+        <a href="/index.html" class="nav-brand">Writing System</a>
         <ul class="nav-links">
           <li><a href="/system/index.html">System</a></li>
-          <li><a href="/context/index.html">Context</a></li>
-          <li><a href="/prompts/index.html">Prompts</a></li>
-          <li><a href="/skills/index.html">Skills</a></li>
-          <li><a href="/knowledge/index.html">Knowledge</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
         </ul>
       </div>
     </nav>
@@ -26,10 +26,10 @@
     <nav class="secondary-nav">
       <div class="secondary-nav-inner">
         <ul>
-          <li><a href="/context/voice-dna.html">Voice DNA</a></li>
-          <li><a href="/context/icp.html">ICP</a></li>
-          <li><a href="/context/business-profile.html">Business Profile</a></li>
-          <li><a href="/context/claims-policy.html">Claims Policy</a></li>
+          <li><a href="/viewer-context/voice-dna.html">Voice DNA</a></li>
+          <li><a href="/viewer-context/icp.html">ICP</a></li>
+          <li><a href="/viewer-context/business-profile.html">Business Profile</a></li>
+          <li><a href="/viewer-context/claims-policy.html">Claims Policy</a></li>
         </ul>
       </div>
     </nav>
@@ -38,41 +38,39 @@
     <div class="breadcrumbs">
       <div class="breadcrumbs-inner">
         <ol>
-          <li><a href="/">Home</a></li>
-          <li><a href="/context/index.html">Context</a></li>
-          <li>Ideal Client Profile</li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li>Claims Policy</li>
         </ol>
       </div>
     </div>
 
     <!-- Main Content -->
     <main class="main-content">
-      <h1 class="mt-0">Ideal Client Profile (ICP)</h1>
+      <h1 class="mt-0">Claims Policy</h1>
 
       <p class="text-muted">
-        Defines who the business writes for — pains, desires, objections, language patterns, and buying triggers.
+        Defines what claims are allowed and how to phrase them. Prevents overpromising and ensures statements are grounded in reality.
       </p>
 
       <div id="file-meta-container"></div>
 
       <h2>About This File</h2>
       <p>
-        <strong>When to load:</strong> Every writing task
+        <strong>When to load:</strong> When making statements about capabilities, security, performance, outcomes, or guarantees
       </p>
       <p>
-        The ICP file captures deep audience understanding to prevent generic marketing speak. It includes:
+        The Claims Policy enforces discipline around bold statements. It includes:
       </p>
       <ul>
-        <li>Primary audience definition and segments</li>
-        <li>Core pains and desired outcomes</li>
-        <li>Language the audience actually uses (often bilingual)</li>
-        <li>Jargon to avoid and plain language alternatives</li>
-        <li>Objections and validated rebuttals</li>
-        <li>Buying triggers and ideal customer signals</li>
+        <li>The three-level claims ladder (Verified, Designed, Targets)</li>
+        <li>Banned absolute claims and safe replacements</li>
+        <li>Metrics and numbers policy (no invented ROI)</li>
+        <li>Preflight credibility checklist</li>
       </ul>
 
       <p>
-        <a href="/docs/icp-info.html">Read the full documentation →</a>
+        <a href="/viewer-docs/claims-policy-info.html">Read the full documentation →</a>
       </p>
 
       <hr>
@@ -94,12 +92,12 @@
       // Display file metadata
       const metaContainer = document.getElementById('file-meta-container');
       metaContainer.innerHTML = WritingSystem.createFileMeta({
-        path: '/context/core/icp.json',
+        path: '/context/core/claims-policy.json',
         trust: 'canonical'
       });
 
       // Render the JSON content
-      await WritingSystem.renderJSON('/context/core/icp.json', 'json-content', 2);
+      await WritingSystem.renderJSON('/context/core/claims-policy.json', 'json-content', 2);
     });
   </script>
 </body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Overview · Writing System</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/index.html" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html" class="active">System</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li>System Overview</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-text">
+        <div id="file-meta-container"></div>
+        <div id="content"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- External Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/common.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+
+  <!-- Common Utilities -->
+  <script src="/js/common.js"></script>
+
+  <!-- Page-Specific Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const metaContainer = document.getElementById('file-meta-container');
+
+      metaContainer.innerHTML = WritingSystem.createFileMeta({
+        path: '/CLAUDE.md',
+        trust: 'canonical',
+        version: '2.1.0',
+        updated: WritingSystem.formatDate('2025-12-20')
+      });
+
+      await WritingSystem.renderMarkdown('/CLAUDE.md', 'content');
+    });
+  </script>
+</body>
+</html>

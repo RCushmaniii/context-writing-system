@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claims Policy Documentation · Writing System</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/index.html" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li>Claims Policy Documentation</li>
+        </ol>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <div class="content-text">
+        <div id="file-meta-container"></div>
+        <div id="content"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/common.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+
+  <script src="/js/common.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const metaContainer = document.getElementById('file-meta-container');
+
+      metaContainer.innerHTML = WritingSystem.createFileMeta({
+        path: '/docs/claims-policy-info.md',
+        trust: 'reference'
+      });
+
+      await WritingSystem.renderMarkdown('/docs/claims-policy-info.md', 'content');
+    });
+  </script>
+</body>
+</html>

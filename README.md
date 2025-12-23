@@ -1,365 +1,184 @@
-# Context Engineering Kit (v2.0)
+---
 
-A modular, production-ready system for generating **high-leverage business assets**  
-(landing pages, sales decks, case studies, posts, emails) that **strictly adhere to your voice, your audience, and your business logic**.
+# Context Engineering Kit
 
-This is not a prompt library.  
-It’s an **operating system for AI-assisted writing**.
+**A production-grade operating system for AI-assisted writing**
+Built to enforce voice, audience, business truth, and claims discipline — at scale.
+
+Live System Explorer:
+👉 [https://vercel.com/rcushmaniii-projects/cushlabs-writing-system](https://vercel.com/rcushmaniii-projects/cushlabs-writing-system)
 
 ---
 
-## 🚀 Why This Exists
+## What This Is
 
-Most AI writing fails because it:
+The Context Engineering Kit is **not a prompt library**.
 
-- sounds generic
-- invents facts
-- ignores positioning
-- drifts over time
-- can’t reuse what already worked
+It is a **governed writing system** that separates:
 
-The Context Engineering Kit solves this by separating **truth**, **structure**, and **examples** into explicit, enforceable layers.
+- **Truth** (what is real)
+- **Structure** (how content is shaped)
+- **Examples** (what “good” looks like)
 
----
+So AI output stays:
 
-## ✨ Key Features
-
-### 🧠 Context-Driven by Design
-
-- **Voice DNA** → how you sound (tone, cadence, banned phrases)
-- **ICP** → who you’re speaking to (pains, desires, objections)
-- **Business Profile** → what you actually offer (no hallucinated pricing or features)
-
-### 🧩 Skill-Based Asset Generation
-
-- Each content type has a dedicated **Skill** (`SKILL.md`)
-- Skills define structure, rules, QA checks, and constraints
-- Reusable across landing pages, decks, emails, posts, and more
-
-### 🧠 Memory That Compounds
-
-- Store “gold standard” examples once
-- Reuse tone, patterns, and phrasing automatically
-- Keep drafts, notes, and templates cleanly separated
-
-### 🛡️ Anti-Hype & Anti-Hallucination
-
-- Claims are constrained by business reality
-- No invented metrics, fake case studies, or marketing fluff
-- Designed for credibility-first B2B communication
-
-### 🪟 Windows-Friendly
-
-- No hidden folders
-- No special tooling required
-- Works with Cursor, Windsurf, Claude Projects, ChatGPT, or any LLM
+- accurate
+- on-brand
+- audience-aware
+- consistent over time
 
 ---
 
-## ⚡ Quick Start
+## Why This Exists
 
-### 1. Setup
+Most AI writing systems fail because they:
 
-Copy this repository into your project root.
+- drift stylistically
+- hallucinate offers or metrics
+- ignore positioning
+- overwrite what already worked
+- treat prompts as magic instead of inputs
 
-### 2. Initialize the Core Profiles (The “Brain”)
-
-Run these once to teach the system who you are:
-
-1. **Voice DNA**
-
-   - Open `/prompts/voice-dna-creator.md`
-   - Paste into your AI chat
-   - Save output to: `/context/core/voice-dna.json`
-
-2. **ICP (Ideal Client Profile)**
-
-   - Open `/prompts/icp-creator.md`
-   - Paste into your AI chat
-   - Save output to: `/context/core/icp.json`
-
-3. **Business Profile**
-   - Open `/prompts/business-profile-creator.md`
-   - Paste into your AI chat
-   - Save output to: `/context/core/business-profile.json`
-
-### 2. /docs/
-
-### 3. Activate
-
-Point your AI assistant to **`CLAUDE.md`**  
-(or `.cursorrules` / project instructions) as the system prompt.
+This kit solves that by making **context explicit, versioned, and enforceable**.
 
 ---
 
-## 🧠 System Architecture
+## Writing System Explorer (New)
+
+The system now includes a **read-only web UI** that renders the repository itself.
+
+The Explorer makes the system:
+
+- human-legible
+- AI-debuggable
+- auditable
+- easier to maintain
+
+**No build step. No framework lock-in. No content mutation.**
+
+Live Explorer:
+👉 [https://vercel.com/rcushmaniii-projects/cushlabs-writing-system](https://vercel.com/rcushmaniii-projects/cushlabs-writing-system)
+
+---
+
+## Key Capabilities
+
+### Context-Driven Writing
+
+- **Voice DNA**
+  Tone, cadence, phrasing, boundaries
+  Prevents generic “AI voice”
+
+- **Ideal Client Profile (ICP)**
+  Pains, desires, objections, real language
+  Enables actual resonance
+
+- **Business Profile**
+  Offers, pricing logic, positioning
+  Prevents invented facts
+
+- **Claims Policy**
+  What can and cannot be stated
+  Enforces credibility-first output
+
+---
+
+### Skill-Based Asset Generation
+
+Each content type has a dedicated **Skill**:
+
+- landing pages
+- sales decks
+- emails
+- blog posts
+- LinkedIn content
+- proposals
+
+Skills define:
+
+- structure
+- inputs
+- QA rules
+- constraints
+
+Voice and claims never live in Skills.
+
+---
+
+### Knowledge That Compounds
+
+- **Gold-standard examples** (what “good” looks like)
+- **Reusable templates** (CTAs, proof, objections)
+- **Drafts and notes** kept explicitly non-canonical
+
+The system improves with use instead of drifting.
+
+---
+
+### Writing System Explorer Features
+
+- Static HTML / CSS / JS
+- Root-relative paths (Vercel-safe)
+- Markdown rendering (docs, prompts, skills)
+- JSON rendering (context profiles)
+- File metadata (path, version, trust level)
+- Visual trust badges (canonical / reference / draft)
+- Responsive and accessible by default
+
+The repository remains the **single source of truth**.
+
+---
+
+## Repository Structure (Canonical)
 
 ```text
-C:.
-|   CLAUDE.md
-|   README.md
-|   STRUCTURE.md
-|
-+---archive
-+---context
-|   \---core
-|           business-profile.json
-|           claims-policy.json
-|           icp.json
-|           voice-dna.json
-|
-+---docs
-|       claims-policy-info.md
-|
-+---knowledge
-|   +---content
-|   |   +---about-page
-|   |   |       about-page.md
-|   |   |
-|   |   +---blog-post
-|   |   |       blog-post.md
-|   |   |
-|   |   +---case-study-snapshot
-|   |   |       case-study-snapshot.md
-|   |   |
-|   |   +---cold-email
-|   |   |       cold-email.md
-|   |   |
-|   |   +---contact-page
-|   |   |       contact-page.md
-|   |   |
-|   |   +---faq
-|   |   |       faq.md
-|   |   |
-|   |   +---landing-page
-|   |   |       landing-page.md
-|   |   |
-|   |   +---linkedin-post
-|   |   |       linkedin-post.md
-|   |   |
-|   |   +---linkedin-profile
-|   |   |       linkedin-profile-ai-consultant.md
-|   |   |
-|   |   +---sales-deck
-|   |   |       sales-deck.md
-|   |   |
-|   |   \---website-hero
-|   |           website-hero.md
-|   |
-|   +---drafts
-|   +---notes
-|   \---templates
-|       +---bios
-|       |       bios.md
-|       |
-|       +---cta
-|       |       cta.md
-|       |
-|       +---objections
-|       |       objections.md
-|       |
-|       +---proof
-|       |       proof.md
-|       |
-|       \---snippets
-|               snippets.md
-|
-+---prompts
-|       business-profile-creator.md
-|       icp-creator.md
-|       voice-dna-creator.md
-|
-\---skills
-    +---about-page
-    |       about-page.md
-    |
-    +---blog-post
-    |       blog-post.md
-    |
-    +---case-study
-    |       case-study.md
-    |
-    +---cold-email
-    |       cold-email.md
-    |
-    +---contact-page
-    |       contact-page.md
-    |
-    +---cta-block
-    |       cta-block.md
-    |
-    +---faq
-    |       faq.md
-    |
-    +---landing-page
-    |       landing-page.md
-    |
-    +---linkedin-post
-    |       linkedin-post.md
-    |
-    +---linkedin-profile
-    |       linkedin-profile.md
-    |
-    +---linkedin-text-message
-    |       linkedin-text-message.md
-    |
-    +---notebooklm
-    |       notebooklm.md
-    |
-    +---prof-block
-    |       prof-block.md
-    |
-    +---proposal-document
-    |       proposal-document.md
-    |
-    +---sales-deck
-    |       sales-deck.md
-    |
-    +---services-page
-    |       services-page.md
-    |
-    +---twitter
-    |       twitter.md
-    |
-    \---website-hero
-            website-hero.md
-
-
+/site/                → Explorer frontend (static)
+/context/core/        → Source-of-truth JSON profiles
+/prompts/             → Creator interview prompts
+/skills/              → Content-type expertise
+/knowledge/           → Examples, templates, references
+/docs/                → Supporting documentation
+/CLAUDE.md            → System contract
+/archive/             → Versioned history
 ```
 
-## 🧠 Core Profiles Explained
+---
 
-The system relies on a small set of **Source of Truth** files.
-If output feels generic, inaccurate, or “AI-ish,” these are the first files to check.
+## Quick Start
 
-| File                    | Purpose                         | Why It Matters                |
-| ----------------------- | ------------------------------- | ----------------------------- |
-| `voice-dna.json`        | Tone, cadence, banned language  | Prevents “AI marketing voice” |
-| `icp.json`              | Pains, goals, objections        | Enables real resonance        |
-| `business-profile.json` | Offers, pricing logic, delivery | Prevents hallucinated claims  |
-| `claims-policy.json`    | What may / may not be claimed   | Enforces credibility          |
+1. Clone the repo
+2. Run creator prompts once:
 
-## ''
+   - `voice-dna-creator.md` → `voice-dna.json`
+   - `icp-creator.md` → `icp.json`
+   - `business-profile-creator.md` → `business-profile.json`
 
-## 🛠️ How Asset Generation Works
-
-### 1. The Call (Natural Language)
-
-You simply ask:
-
-> “Write a landing page for the Clarity Sprint.”
-
-### 2. The System Routes Automatically
-
-- Detects the content type
-- Loads the relevant **Skill**
-- Loads **Core Context**
-- Pulls examples from **Knowledge**
-- Generates structured, on-brand output
+3. Point your AI tool to `CLAUDE.md`
+4. Generate assets using natural language
 
 No prompt engineering required.
 
 ---
 
-## 🧩 Creating New Skills
-
-Create a new Skill when you repeat a task more than twice.
-
-1. Copy `/skills/SKILL-TEMPLATE.md`
-2. Rename the folder (e.g. `/skills/twitter-thread/`)
-3. Define:
-   - Goal
-   - Triggers
-   - Inputs
-   - Output format
-   - Claims & QA rules
-
-The system will automatically use the Skill when triggered.
-
----
-
-## 🧠 Knowledge Layer (Why This Compounds)
-
-### `/knowledge/content/`
-
-- Finished, polished examples
-- Shows what “good” looks like
-- Referenced automatically for consistency
-
-### `/knowledge/templates/`
-
-Reusable blocks:
-
-- CTAs
-- Proof
-- Bios
-- Objection handling
-- Microcopy
-
-This is how the system **gets better over time instead of drifting**.
-
----
-
-## 🔧 Maintenance & Troubleshooting
-
-### The AI sounds generic
-
-- **Check:** `voice-dna.json`
-- **Fix:** Add better writing samples and re-run the creator
-
-### The AI invents pricing or features
-
-- **Check:** `business-profile.json`
-- **Fix:** Update or re-run the profile
-
-### The AI ignores Skill rules
-
-- **Check:** Does the trigger phrase match?
-- **Fix:** Make triggers explicit in `SKILL.md`
-
----
-
-## 🧰 Tech Stack & Compatibility
-
-- Markdown-based
-- JSON for structured truth
-- PowerShell-friendly
-
-Works with:
+## Supported Tools
 
 - Claude Projects
 - Cursor
 - Windsurf
 - ChatGPT
-- Any RAG-enabled system
+- Any RAG-capable system
 
+Markdown + JSON.
 No vendor lock-in.
 
 ---
 
-## 📜 Version History
+## Philosophy
 
-**v2.0**
+Structure beats prompts.
+Truth beats cleverness.
+Systems beat inspiration.
 
-- Asset-first architecture
-- Explicit Skills + Knowledge layers
-- Windows-friendly structure
-- Claims-safe writing constraints
-
-**v1.0**
-
-- Initial context-based writing system
+This kit is for people who want **repeatable clarity**, not AI theater.
 
 ---
-
-## 🧭 Philosophy
-
-> Structure beats prompts.
-> Truth beats cleverness.
-> Systems beat inspiration.
-
-This kit is designed for people who want **repeatable clarity**, not AI theater.
-
-```
-
-```
