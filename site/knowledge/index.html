@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge - Writing System Explorer</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/context/index.html">Context</a></li>
+          <li><a href="/prompts/index.html">Prompts</a></li>
+          <li><a href="/skills/index.html">Skills</a></li>
+          <li><a href="/knowledge/index.html">Skills</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <nav class="secondary-nav">
+      <div class="secondary-nav-inner">
+        <ul>
+          <li><a href="/knowledge/content/index.html">Gold-Standard Content</a></li>
+          <li><a href="/knowledge/templates/index.html">Reusable Templates</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Knowledge</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-text">
+        <h1 class="mt-0">Knowledge</h1>
+
+        <p class="text-muted">
+          Reference content, templates, and examples organized by trust level and purpose.
+        </p>
+
+        <hr>
+
+        <h2>What Knowledge Is</h2>
+
+        <p>
+          The Knowledge directory contains examples, templates, and reference material that support content creation. It is organized into categories based on <strong>trust level</strong> and <strong>intended use</strong>:
+        </p>
+
+        <ul>
+          <li><strong>Content</strong> — Published, polished "gold standard" examples</li>
+          <li><strong>Templates</strong> — Reusable snippets (CTAs, proof blocks, bios, objections, microcopy)</li>
+          <li><strong>Drafts</strong> — Work-in-progress (directional only, not reference material)</li>
+          <li><strong>Notes</strong> — Raw ideas, research, fragments (verify before reuse)</li>
+        </ul>
+
+        <hr>
+
+        <h2>Trust Levels</h2>
+
+        <div class="card">
+          <h3 class="card-title mt-0">
+            <span class="trust-badge trust-canonical">Gold-Standard Content</span>
+          </h3>
+          <p><strong>Location:</strong> <code>/knowledge/content/</code></p>
+          <p>
+            Published, polished examples that represent "what good looks like." Safe to imitate tone, structure, and phrasing.
+          </p>
+          <p>
+            <a href="/knowledge/content/index.html">Browse gold-standard content →</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title mt-0">
+            <span class="trust-badge trust-reference">Reusable Templates</span>
+          </h3>
+          <p><strong>Location:</strong> <code>/knowledge/templates/</code></p>
+          <p>
+            Drop-in components like CTAs, proof blocks, bios, objection handling, and microcopy. Use verbatim unless adaptation is required.
+          </p>
+          <p>
+            <a href="/knowledge/templates/index.html">Browse reusable templates →</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title mt-0">
+            <span class="trust-badge trust-draft">Drafts & Notes</span>
+          </h3>
+          <p><strong>Location:</strong> <code>/knowledge/drafts/</code> and <code>/knowledge/notes/</code></p>
+          <p>
+            Work-in-progress and raw thinking. Not included in this explorer. Do not reuse phrasing without refinement and verification.
+          </p>
+        </div>
+
+        <hr>
+
+        <h2>How Knowledge Is Used</h2>
+
+        <p>
+          When Skills generate content, they may reference Knowledge to:
+        </p>
+
+        <ul>
+          <li>Ensure consistency with past messaging</li>
+          <li>Reuse proven CTAs, proof points, or objection handling</li>
+          <li>Reference gold-standard examples for tone and structure</li>
+        </ul>
+
+        <p>
+          <strong>Knowledge lookup priority:</strong>
+        </p>
+
+        <ol>
+          <li><code>/knowledge/content/&lt;skill-name&gt;/</code> (gold-standard examples)</li>
+          <li><code>/knowledge/templates/</code> (reusable blocks)</li>
+          <li><code>/knowledge/drafts/</code> (only if explicitly requested)</li>
+          <li><code>/knowledge/notes/</code> (last resort; verify before reuse)</li>
+        </ol>
+
+        <p class="text-muted">
+          When Context and Knowledge conflict, <strong>Context always wins</strong>.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/common.js"></script>
+</body>
+</html>

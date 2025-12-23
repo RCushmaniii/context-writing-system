@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Writing System Explorer</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/context/index.html">Context</a></li>
+          <li><a href="/prompts/index.html">Prompts</a></li>
+          <li><a href="/skills/index.html">Skills</a></li>
+          <li><a href="/knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Skills</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-text">
+        <h1 class="mt-0">Skills</h1>
+
+        <p class="text-muted">
+          Content type expertise packages. Each skill defines structure, strategy, constraints, and QA rules for a specific asset type.
+        </p>
+
+        <hr>
+
+        <h2>What Skills Are</h2>
+
+        <p>
+          Skills package expertise for a specific content type into a single authoritative Markdown file. They define:
+        </p>
+
+        <ul>
+          <li><strong>Structure</strong> — Required sections, sequence, and hierarchy</li>
+          <li><strong>Strategy</strong> — Purpose, positioning, and persuasion logic</li>
+          <li><strong>Constraints</strong> — What to avoid, length limits, tone rules</li>
+          <li><strong>QA rules</strong> — Preflight checks before shipping</li>
+        </ul>
+
+        <p>
+          Skills are <strong>distinct from context</strong>:
+        </p>
+
+        <ul>
+          <li>Skills define <strong>format + strategy</strong></li>
+          <li>Context defines <strong>voice, audience, offers, and claims</strong></li>
+        </ul>
+
+        <p class="text-muted">
+          When a skill is used, it loads the appropriate context files to produce output that is both structurally correct and factually accurate.
+        </p>
+
+        <hr>
+
+        <h2>Core Skills</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/skills/landing-page.html">Landing Page</a>
+            </h3>
+            <p class="text-muted">Complete conversion-focused page</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/skills/website-hero.html">Website Hero</a>
+            </h3>
+            <p class="text-muted">Above-the-fold section</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/skills/blog-post.html">Blog Post</a>
+            </h3>
+            <p class="text-muted">Long-form article or guide</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/skills/linkedin-post.html">LinkedIn Post</a>
+            </h3>
+            <p class="text-muted">Social content for LinkedIn feed</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/skills/cold-email.html">Cold Email</a>
+            </h3>
+            <p class="text-muted">Outbound sales email</p>
+          </div>
+        </div>
+
+        <p class="text-muted mt-lg">
+          <em>Additional skills available in the repository: About Page, Services Page, Contact Page, FAQ, Case Study, Proposal Document, Sales Deck, LinkedIn Profile, Twitter/X, CTA Block, Proof Block, NotebookLM, and more.</em>
+        </p>
+
+        <hr>
+
+        <h2>How Skills Work</h2>
+
+        <ol>
+          <li><strong>Request triggers skill</strong> — User asks for a specific content type (e.g., "write a landing page")</li>
+          <li><strong>Skill loads</strong> — The corresponding <code>.md</code> file is loaded</li>
+          <li><strong>Context is loaded</strong> — Voice DNA, ICP, Business Profile, Claims Policy are loaded as needed</li>
+          <li><strong>Input gate applies</strong> — Required inputs are verified before proceeding</li>
+          <li><strong>Output is generated</strong> — Following the skill's structure and context constraints</li>
+          <li><strong>QA checks run</strong> — Preflight checks ensure output meets quality standards</li>
+        </ol>
+
+        <p class="text-muted">
+          Skills prevent format drift and ensure consistent quality across all content types.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/common.js"></script>
+</body>
+</html>

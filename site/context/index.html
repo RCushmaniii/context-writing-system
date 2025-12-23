@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Context Profiles · Writing System</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/context/index.html" class="active">Context</a></li>
+          <li><a href="/prompts/index.html">Prompts</a></li>
+          <li><a href="/skills/index.html">Skills</a></li>
+          <li><a href="/knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <nav class="secondary-nav">
+      <div class="secondary-nav-inner">
+        <ul>
+          <li><a href="/context/voice-dna.html">Voice DNA</a></li>
+          <li><a href="/context/icp.html">ICP</a></li>
+          <li><a href="/context/business-profile.html">Business Profile</a></li>
+          <li><a href="/context/claims-policy.html">Claims Policy</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Context Profiles</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-text">
+        <h1 class="mt-0">Context Profiles</h1>
+
+        <p class="text-muted">
+          Core JSON files that define how the system writes. These are first-class sources of truth.
+        </p>
+
+        <p class="text-muted">
+          These files are not edited casually. They are updated intentionally when reality changes.
+        </p>
+
+        <hr>
+
+        <h2>What Context Profiles Are</h2>
+
+        <p>
+          Context profiles are structured data files that constrain AI-generated content to ensure:
+        </p>
+
+        <ul>
+          <li>Voice consistency (tone, rhythm, phrasing)</li>
+          <li>Audience fit (language, pain points, objections)</li>
+          <li>Business accuracy (offers, pricing, positioning)</li>
+          <li>Claims discipline (what can and cannot be stated)</li>
+        </ul>
+
+        <p>
+          These files are loaded by Skills before any content is generated. They act as guardrails
+          against generic AI voice, hallucinated claims, and off-brand messaging.
+        </p>
+
+        <hr>
+
+        <h2>The Four Core Profiles</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/context/voice-dna.html">Voice DNA</a>
+            </h3>
+            <p class="text-muted">
+              <strong>When to load</strong><br>
+              Every writing task
+            </p>
+            <p>
+              Defines how the business sounds — tone, rhythm, sentence structure, distinctive phrases,
+              and explicit boundaries.
+            </p>
+            <p class="text-muted">
+              <code>/context/core/voice-dna.json</code>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/context/icp.html">Ideal Client Profile (ICP)</a>
+            </h3>
+            <p class="text-muted">
+              <strong>When to load</strong><br>
+              Every writing task
+            </p>
+            <p>
+              Defines who the business writes for — pains, desires, objections, language patterns,
+              and buying triggers.
+            </p>
+            <p class="text-muted">
+              <code>/context/core/icp.json</code>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/context/business-profile.html">Business Profile</a>
+            </h3>
+            <p class="text-muted">
+              <strong>When to load</strong><br>
+              When CTAs, offers, pricing, deliverables, or positioning are present
+            </p>
+            <p>
+              Defines what the business offers — services, pricing, positioning, proof points,
+              and CTAs. Prevents invented offers.
+            </p>
+            <p class="text-muted">
+              <code>/context/core/business-profile.json</code>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/context/claims-policy.html">Claims Policy</a>
+            </h3>
+            <p class="text-muted">
+              <strong>When to load</strong><br>
+              When making statements about capabilities, security, performance, outcomes,
+              or guarantees
+            </p>
+            <p>
+              Defines what claims are allowed and how to phrase them. Prevents overpromising and
+              ensures statements are grounded in reality.
+            </p>
+            <p class="text-muted">
+              <code>/context/core/claims-policy.json</code>
+            </p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2>Priority Hierarchy</h2>
+
+        <p>When conflicts arise between context files:</p>
+
+        <ol>
+          <li><strong>Truth &amp; claims constraints:</strong> Claims Policy wins</li>
+          <li><strong>Tone/style conflicts:</strong> Voice DNA wins</li>
+          <li><strong>Audience language conflicts:</strong> ICP wins</li>
+          <li><strong>Offer/CTA accuracy:</strong> Business Profile wins</li>
+        </ol>
+
+        <p class="text-muted">
+          In general: <strong>truth overrides style, and style overrides format</strong>.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Profile Creator - Writing System Explorer</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/" class="nav-brand">Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/context/index.html">Context</a></li>
+          <li><a href="/prompts/index.html">Prompts</a></li>
+          <li><a href="/skills/index.html">Skills</a></li>
+          <li><a href="/knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <nav class="secondary-nav">
+      <div class="secondary-nav-inner">
+        <ul>
+          <li><a href="/prompts/voice-dna-creator.html">Voice DNA Creator</a></li>
+          <li><a href="/prompts/icp-creator.html">ICP Creator</a></li>
+          <li><a href="/prompts/business-profile-creator.html">Business Profile Creator</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/prompts/index.html">Prompts</a></li>
+          <li>Business Profile Creator</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="mt-0">Business Profile Creator</h1>
+
+      <p class="text-muted">
+        Structured interview prompt that documents offers, pricing, and positioning to generate <code>business-profile.json</code>.
+      </p>
+
+      <div id="file-meta-container"></div>
+
+      <h2>Purpose</h2>
+      <p>
+        This prompt simulates a thorough professional interview with a business owner to extract factual information about what the business offers, how it's positioned, and what can be claimed.
+      </p>
+
+      <h2>Expected Output</h2>
+      <p>
+        A complete <code>business-profile.json</code> file containing:
+      </p>
+      <ul>
+        <li>Business name, tagline, and positioning statement</li>
+        <li>Brand voice rules (first-person vs. we, tone)</li>
+        <li>Service offerings with deliverables and pricing</li>
+        <li>Proof points and credibility mechanisms</li>
+        <li>Competitive differentiation</li>
+        <li>CTAs and booking mechanisms</li>
+      </ul>
+
+      <h2>Related Files</h2>
+      <ul>
+        <li><a href="/context/business-profile.html">View the Business Profile context file →</a></li>
+        <li><a href="/docs/business-profile-info.html">Read the Business Profile documentation →</a></li>
+      </ul>
+
+      <hr>
+
+      <h2>Prompt Content</h2>
+      <div id="content" class="content-text"></div>
+    </main>
+  </div>
+
+  <!-- External Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/common.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+
+  <!-- Common Utilities -->
+  <script src="/js/common.js"></script>
+
+  <!-- Page-Specific Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Display file metadata
+      const metaContainer = document.getElementById('file-meta-container');
+      metaContainer.innerHTML = WritingSystem.createFileMeta({
+        path: '/prompts/business-profile-creator.md',
+        trust: 'reference'
+      });
+
+      // Render the Markdown content
+      await WritingSystem.renderMarkdown('/prompts/business-profile-creator.md', 'content');
+    });
+  </script>
+</body>
+</html>
