@@ -1,5 +1,3 @@
----
-
 # Context Engineering Kit
 
 **A production-grade operating system for AI-assisted writing**
