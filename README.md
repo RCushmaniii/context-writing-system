@@ -6,7 +6,7 @@
 
 [Live Explorer →](https://cushlabs-writing-system.vercel.app/)
 
-![Writing System Explorer](.github/images/screenshot.jpeg)
+![Writing System Explorer](.github/images/screenshot.jpg)
 
 ---
 
