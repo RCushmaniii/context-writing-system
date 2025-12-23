@@ -1,4 +1,4 @@
-# Context Engineering Kit (v2.0)
+# CushLabs.ai Writing System
 
 ## Here's the thing:
 
@@ -35,6 +35,8 @@ It's the difference between teaching someone to cook by narrating every step eac
 The `/context/core/` folder holds your business truth—voice, audience, offers, claims boundaries. The `/skills/` folder contains content-type-specific instructions for landing pages, blog posts, sales decks, emails, and more. The `/knowledge/` folder stores polished examples and reusable templates. The `/prompts/` folder has interactive creators to help you build your core profiles if you're starting from scratch.
 
 There's a system prompt file (`CLAUDE.md`) that teaches AI assistants how to use everything. Point Claude Projects, Cursor, or any other AI tool at it, and the system activates.
+
+**New in v1.0.1:** A read-only web UI (the **Writing System Explorer**) that renders the entire repository as a navigable static site. View your context profiles, prompts, skills, and knowledge base in a clean, branded interface. No build step, no framework dependencies—just static HTML/CSS/JS deployed to Vercel.
 
 No hidden magic. No proprietary tools. Just markdown files, JSON for structured data, and a workflow that works in Windows, PowerShell, VS Code, or whatever you're already using.
 
@@ -76,6 +78,7 @@ MIT License. Use it, fork it, adapt it. No attribution required, but if you buil
 
 ---
 
-**Repository:** [github.com/your-username/context-engineering-kit]  
-**Questions:** Open an issue or email [your-email]  
-**Version:** 2.0.0 (December 2024)
+**Live Demo:** [cushlabs-writing-system.vercel.app](https://cushlabs-writing-system.vercel.app/)  
+**Repository:** [github.com/RCushmaniii/cushlabs-writing-system](https://github.com/RCushmaniii/cushlabs-writing-system)  
+**Questions:** Open an issue on GitHub  
+**Version:** 1.0.1 (December 2025)
