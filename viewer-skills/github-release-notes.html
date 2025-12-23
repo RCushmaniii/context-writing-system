@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Release Notes - Writing System Explorer</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/index.html" class="nav-brand">CushLabs.ai Writing System</a>
+        <ul class="nav-links">
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-inner">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li>GitHub Release Notes</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="mt-0">GitHub Release Notes Skill</h1>
+
+      <p class="text-muted">
+        Structured release notes with highlights, stability declarations, and explicit non-goals.
+      </p>
+
+      <div id="file-meta-container"></div>
+
+      <hr>
+
+      <div id="content" class="content-text"></div>
+    </main>
+  </div>
+
+  <!-- External Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/common.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+
+  <!-- Common Utilities -->
+  <script src="/js/common.js"></script>
+
+  <!-- Page-Specific Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Display file metadata
+      const metaContainer = document.getElementById('file-meta-container');
+      metaContainer.innerHTML = WritingSystem.createFileMeta({
+        path: '/skills/github/github-release-notes.md',
+        trust: 'reference'
+      });
+
+      // Render the Markdown content
+      await WritingSystem.renderMarkdown('/skills/github/github-release-notes.md', 'content');
+    });
+  </script>
+</body>
+</html>
