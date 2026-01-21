@@ -4,6 +4,8 @@
 
 **No drift. No hallucinations. Just _you_—at 10x speed.**
 
+**A context engineering framework that makes AI write like you, not like AI.** It stores your voice, audience profile, business facts, and claim rules in structured JSON files. When you request content (landing page, email, LinkedIn post, etc.), the AI loads these "truth files" plus format-specific skills to produce consistent, on-brand output — without hallucinated claims or generic phrasing.
+
 [Live Explorer →](https://cushlabs-writing-system.vercel.app/)
 
 ![Writing System Explorer](.github/images/screenshot.jpg)
