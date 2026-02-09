@@ -257,11 +257,167 @@ function isMarkdownFile(path) {
   return ext === 'md' || ext === 'markdown';
 }
 
+// ===== Dropdown Navigation =====
+
+/**
+ * Initialize dropdown navigation menus (mouse + keyboard accessible)
+ */
+function initDropdowns() {
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+    const menu = dropdown.querySelector('.nav-dropdown-menu');
+    if (!trigger || !menu) return;
+
+    const menuItems = menu.querySelectorAll('a');
+    let isOpen = false;
+
+    const open = () => {
+      isOpen = true;
+      dropdown.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+
+    const close = () => {
+      isOpen = false;
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+
+    const toggle = () => {
+      if (isOpen) {
+        close();
+      } else {
+        open();
+      }
+    };
+
+    // Click handler
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggle();
+    });
+
+    // Hover handlers
+    dropdown.addEventListener('mouseenter', open);
+    dropdown.addEventListener('mouseleave', close);
+
+    // Keyboard navigation
+    trigger.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          toggle();
+          if (isOpen && menuItems.length > 0) {
+            menuItems[0].focus();
+          }
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          if (!isOpen) open();
+          if (menuItems.length > 0) {
+            menuItems[0].focus();
+          }
+          break;
+        case 'Escape':
+          close();
+          trigger.focus();
+          break;
+      }
+    });
+
+    // Menu item keyboard navigation
+    menuItems.forEach((item, index) => {
+      item.addEventListener('keydown', (e) => {
+        switch (e.key) {
+          case 'ArrowDown':
+            e.preventDefault();
+            if (index < menuItems.length - 1) {
+              menuItems[index + 1].focus();
+            }
+            break;
+          case 'ArrowUp':
+            e.preventDefault();
+            if (index > 0) {
+              menuItems[index - 1].focus();
+            } else {
+              trigger.focus();
+            }
+            break;
+          case 'Escape':
+            close();
+            trigger.focus();
+            break;
+          case 'Tab':
+            // Allow natural tab behavior but close dropdown
+            close();
+            break;
+        }
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        close();
+      }
+    });
+  });
+}
+
+// ===== Mobile Menu =====
+
+/**
+ * Initialize mobile slide-out menu
+ */
+function initMobileMenu() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  const overlay = document.querySelector('.mobile-menu-overlay');
+  const closeBtn = document.querySelector('.mobile-menu-close');
+
+  if (!toggle || !menu || !overlay) return;
+
+  const open = () => {
+    menu.classList.add('open');
+    overlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+    toggle.setAttribute('aria-expanded', 'true');
+  };
+
+  const close = () => {
+    menu.classList.remove('open');
+    overlay.classList.remove('visible');
+    document.body.style.overflow = '';
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', open);
+  overlay.addEventListener('click', close);
+  if (closeBtn) closeBtn.addEventListener('click', close);
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      close();
+    }
+  });
+
+  // Close when clicking a link
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', close);
+  });
+}
+
 // ===== Initialization =====
 
 document.addEventListener('DOMContentLoaded', () => {
   setActiveNav();
   initCollapsibles();
+  initDropdowns();
+  initMobileMenu();
 });
 
 // ===== Public API =====
@@ -272,6 +428,8 @@ window.WritingSystem = {
   createFileMeta,
   createCollapsible,
   setActiveNav,
+  initDropdowns,
+  initMobileMenu,
   formatDate,
   isJSONFile,
   isMarkdownFile

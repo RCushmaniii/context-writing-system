@@ -1,0 +1,296 @@
+{
+  "_meta": {
+    "id": "voice-discovery",
+    "title": "Voice Discovery Survey",
+    "description": "Capture the raw inputs needed to build a Voice DNA profile",
+    "targetProfile": "voice-dna.json",
+    "version": "1.0.0"
+  },
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Identity & Background",
+      "questions": [
+        {
+          "id": "name",
+          "type": "text",
+          "label": "What is your name or company name?",
+          "placeholder": "e.g., John Smith or Acme Corp",
+          "mapsTo": "data.core_identity.who_you_are"
+        },
+        {
+          "id": "role",
+          "type": "text",
+          "label": "What is your role or title?",
+          "placeholder": "e.g., Founder, Consultant, CEO",
+          "mapsTo": "data.core_identity.who_you_are"
+        },
+        {
+          "id": "industry",
+          "type": "text",
+          "label": "What industry do you operate in?",
+          "placeholder": "e.g., SaaS, Professional Services, E-commerce",
+          "mapsTo": "data.core_identity.who_you_are"
+        },
+        {
+          "id": "what_you_do",
+          "type": "textarea",
+          "label": "In one sentence, what do you help people accomplish?",
+          "hint": "Focus on the transformation or outcome, not the method",
+          "placeholder": "e.g., I help small business owners automate their customer support so they can focus on growth",
+          "maxLength": 500,
+          "mapsTo": "data.core_identity.what_you_do"
+        },
+        {
+          "id": "your_angle",
+          "type": "textarea",
+          "label": "What makes your approach different from others in your space?",
+          "hint": "Your unique perspective, methodology, or positioning",
+          "placeholder": "e.g., I combine enterprise rigor with startup speed...",
+          "maxLength": 500,
+          "mapsTo": "data.core_identity.your_angle"
+        }
+      ]
+    },
+    {
+      "id": "communication_style",
+      "title": "Communication Style",
+      "questions": [
+        {
+          "id": "formality",
+          "type": "slider",
+          "label": "How formal is your communication style?",
+          "min": 1,
+          "max": 10,
+          "default": 5,
+          "labels": {
+            "left": "Very Casual",
+            "right": "Very Formal"
+          },
+          "mapsTo": "data.communication_style.formality"
+        },
+        {
+          "id": "directness",
+          "type": "slider",
+          "label": "How direct are you in communication?",
+          "min": 1,
+          "max": 10,
+          "default": 7,
+          "labels": {
+            "left": "Indirect / Diplomatic",
+            "right": "Very Direct"
+          },
+          "mapsTo": "data.communication_style.directness"
+        },
+        {
+          "id": "technical_depth",
+          "type": "slider",
+          "label": "How technical is your default communication?",
+          "min": 1,
+          "max": 10,
+          "default": 5,
+          "labels": {
+            "left": "Plain English",
+            "right": "Highly Technical"
+          },
+          "mapsTo": "data.technical_calibration.default_mode"
+        },
+        {
+          "id": "humor_level",
+          "type": "slider",
+          "label": "How much humor do you use in professional communication?",
+          "min": 1,
+          "max": 10,
+          "default": 4,
+          "labels": {
+            "left": "Serious Only",
+            "right": "Frequent Humor"
+          },
+          "mapsTo": "data.authenticity_markers.humor_style"
+        },
+        {
+          "id": "voice_traits",
+          "type": "multiselect",
+          "label": "Which words best describe your communication style?",
+          "hint": "Select 3-5 that feel most authentic",
+          "minSelect": 3,
+          "maxSelect": 5,
+          "options": [
+            { "value": "direct", "label": "Direct" },
+            { "value": "warm", "label": "Warm" },
+            { "value": "technical", "label": "Technical" },
+            { "value": "conversational", "label": "Conversational" },
+            { "value": "authoritative", "label": "Authoritative" },
+            { "value": "approachable", "label": "Approachable" },
+            { "value": "witty", "label": "Witty" },
+            { "value": "serious", "label": "Serious" },
+            { "value": "empathetic", "label": "Empathetic" },
+            { "value": "confident", "label": "Confident" },
+            { "value": "humble", "label": "Humble" },
+            { "value": "enthusiastic", "label": "Enthusiastic" }
+          ],
+          "mapsTo": "data.emotional_palette.primary_emotions"
+        }
+      ]
+    },
+    {
+      "id": "language_patterns",
+      "title": "Language Patterns",
+      "questions": [
+        {
+          "id": "signature_phrases",
+          "type": "textarea",
+          "label": "What phrases do you find yourself saying often?",
+          "hint": "List 5-10 phrases you naturally use in conversation or writing",
+          "placeholder": "e.g., \"Here's the thing...\"\n\"Let's be honest...\"\n\"Bottom line...\"",
+          "maxLength": 1000,
+          "mapsTo": "data.authenticity_markers.signature_phrases"
+        },
+        {
+          "id": "banned_words",
+          "type": "textarea",
+          "label": "What words or phrases should we NEVER use?",
+          "hint": "Words that feel off-brand, inauthentic, or overused",
+          "placeholder": "e.g., synergy, leverage, disrupt, game-changer",
+          "maxLength": 500,
+          "mapsTo": "data.voice_boundaries.never_do"
+        },
+        {
+          "id": "pronoun_preference",
+          "type": "choice",
+          "label": "What pronoun style do you prefer?",
+          "options": [
+            {
+              "value": "first_singular",
+              "label": "First person singular (I, my, me)",
+              "description": "Solo expert or personal brand positioning"
+            },
+            {
+              "value": "first_plural",
+              "label": "First person plural (We, our, us)",
+              "description": "Team or company positioning"
+            },
+            {
+              "value": "mixed",
+              "label": "Mixed depending on context",
+              "description": "Flexible based on audience or content type"
+            }
+          ],
+          "mapsTo": "data.social_positioning.pronoun_choice"
+        }
+      ]
+    },
+    {
+      "id": "worldview",
+      "title": "Beliefs & Worldview",
+      "questions": [
+        {
+          "id": "core_beliefs",
+          "type": "textarea",
+          "label": "What are 3-5 beliefs that shape how you approach your work?",
+          "hint": "Principles you'd defend, even if unpopular",
+          "placeholder": "e.g., \"Clarity is a form of respect\"\n\"Most problems are decision problems, not tool problems\"",
+          "maxLength": 1500,
+          "mapsTo": "data.worldview.beliefs"
+        },
+        {
+          "id": "contrarian_takes",
+          "type": "textarea",
+          "label": "What contrarian opinions do you hold about your industry?",
+          "hint": "Things you believe that most people in your space would disagree with",
+          "placeholder": "e.g., \"Most digital transformation fails because the decision is fuzzy, not because the technology is wrong\"",
+          "maxLength": 1000,
+          "mapsTo": "data.worldview.contrarian_takes"
+        },
+        {
+          "id": "pet_peeves",
+          "type": "textarea",
+          "label": "What communication habits annoy you?",
+          "hint": "Things others do in their writing or speaking that you want to avoid",
+          "placeholder": "e.g., vague claims, buzzword overload, hype language",
+          "maxLength": 500,
+          "mapsTo": "data.authenticity_markers.pet_peeves"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Writing Examples",
+      "questions": [
+        {
+          "id": "good_examples",
+          "type": "textarea",
+          "label": "Share 1-2 pieces of your own writing you're proud of",
+          "hint": "Paste text samples that represent how you want to sound",
+          "placeholder": "Paste your writing here...",
+          "maxLength": 3000,
+          "mapsTo": "data.illustrative_moments.examples"
+        },
+        {
+          "id": "anti_examples",
+          "type": "textarea",
+          "label": "Describe or paste examples of writing styles you want to AVOID",
+          "hint": "What should your writing never sound like?",
+          "placeholder": "e.g., \"Overly salesy marketing copy with lots of exclamation points!!!\"",
+          "maxLength": 1500,
+          "mapsTo": "data.voice_boundaries.stretch_zones"
+        }
+      ]
+    },
+    {
+      "id": "audience_context",
+      "title": "Audience Context",
+      "questions": [
+        {
+          "id": "primary_reader",
+          "type": "text",
+          "label": "Who is your primary reader?",
+          "hint": "Job title or role",
+          "placeholder": "e.g., VP of Engineering, Solo Founder, Marketing Director",
+          "mapsTo": "data.contextual_adaptations.audience_calibration"
+        },
+        {
+          "id": "reader_sophistication",
+          "type": "choice",
+          "label": "How sophisticated is your typical reader?",
+          "options": [
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "description": "New to the topic, needs definitions and context"
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "description": "Familiar with basics, wants practical guidance"
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "description": "Expert-level, wants nuance and tradeoffs"
+            },
+            {
+              "value": "mixed",
+              "label": "Mixed audience",
+              "description": "Wide range of expertise levels"
+            }
+          ],
+          "mapsTo": "data.contextual_adaptations.audience_calibration"
+        },
+        {
+          "id": "reader_skepticism",
+          "type": "slider",
+          "label": "How skeptical is your typical reader?",
+          "min": 1,
+          "max": 10,
+          "default": 6,
+          "labels": {
+            "left": "Trusting / Open",
+            "right": "Highly Skeptical"
+          },
+          "mapsTo": "data.contextual_adaptations.audience_calibration.skeptics"
+        }
+      ]
+    }
+  ]
+}

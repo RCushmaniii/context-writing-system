@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Business Profile Survey - Writing System</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    body { overflow: hidden; margin: 0; }
+  </style>
+</head>
+<body>
+  <div id="survey-container"></div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/survey.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const survey = new SurveyEngine({
+        containerId: 'survey-container'
+      });
+
+      try {
+        await survey.load('/survey/business-profile.json');
+        survey.render();
+      } catch (error) {
+        document.getElementById('survey-container').innerHTML = `
+          <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 2rem;">
+            <div>
+              <h1>Unable to load survey</h1>
+              <p>${error.message}</p>
+              <a href="/viewer-survey/index.html" style="color: white; text-decoration: underline;">Return to survey list</a>
+            </div>
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

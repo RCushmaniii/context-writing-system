@@ -1,0 +1,260 @@
+{
+  "_meta": {
+    "id": "icp-discovery",
+    "title": "ICP Discovery Survey",
+    "description": "Capture inputs for building an Ideal Customer Profile",
+    "targetProfile": "icp.json",
+    "version": "1.0.0"
+  },
+  "sections": [
+    {
+      "id": "target_market",
+      "title": "Target Market",
+      "questions": [
+        {
+          "id": "primary_audience",
+          "type": "textarea",
+          "label": "Who is your primary audience?",
+          "hint": "Describe the specific type of person or company you serve best",
+          "placeholder": "e.g., SMB founders in B2B services with 10-50 employees who need to scale operations without adding headcount",
+          "maxLength": 500,
+          "mapsTo": "primary_audience"
+        },
+        {
+          "id": "company_size",
+          "type": "choice",
+          "label": "What company size do you typically serve?",
+          "options": [
+            {
+              "value": "solo",
+              "label": "Solopreneurs / Freelancers",
+              "description": "1 person operations"
+            },
+            {
+              "value": "small",
+              "label": "Small businesses",
+              "description": "2-10 employees"
+            },
+            {
+              "value": "smb",
+              "label": "SMBs",
+              "description": "10-200 employees"
+            },
+            {
+              "value": "midmarket",
+              "label": "Mid-market",
+              "description": "200-1000 employees"
+            },
+            {
+              "value": "enterprise",
+              "label": "Enterprise",
+              "description": "1000+ employees"
+            }
+          ],
+          "mapsTo": "company_profile.size"
+        },
+        {
+          "id": "industries",
+          "type": "textarea",
+          "label": "What industries do you serve?",
+          "hint": "List specific industries or verticals",
+          "placeholder": "e.g., B2B SaaS, Professional Services, E-commerce, Healthcare",
+          "maxLength": 500,
+          "mapsTo": "company_profile.industries"
+        },
+        {
+          "id": "geographic_focus",
+          "type": "textarea",
+          "label": "What geographic markets do you focus on?",
+          "hint": "Countries, regions, or specific characteristics",
+          "placeholder": "e.g., US and Canada, English-speaking markets, LATAM expansion",
+          "maxLength": 300,
+          "mapsTo": "geographic_segments"
+        }
+      ]
+    },
+    {
+      "id": "decision_makers",
+      "title": "Decision Makers",
+      "questions": [
+        {
+          "id": "buyer_titles",
+          "type": "textarea",
+          "label": "What job titles typically buy from you?",
+          "hint": "List 3-5 titles that make or influence purchase decisions",
+          "placeholder": "e.g., CEO, COO, VP of Operations, Director of Customer Success",
+          "maxLength": 300,
+          "mapsTo": "decision_maker.titles"
+        },
+        {
+          "id": "buyer_psychographic",
+          "type": "textarea",
+          "label": "What characterizes your ideal buyer psychologically?",
+          "hint": "Their mindset, values, and decision-making style",
+          "placeholder": "e.g., Pragmatic, budget-conscious, skeptical of hype, values proven results",
+          "maxLength": 500,
+          "mapsTo": "decision_maker.psychographic"
+        },
+        {
+          "id": "budget_signals",
+          "type": "text",
+          "label": "What budget range indicates a good fit?",
+          "placeholder": "e.g., $5K-$25K for initial engagement",
+          "mapsTo": "ideal_client_profile.budget_signals"
+        }
+      ]
+    },
+    {
+      "id": "pains",
+      "title": "Customer Pains",
+      "questions": [
+        {
+          "id": "primary_pains",
+          "type": "textarea",
+          "label": "What are the top 3-5 pains your customers experience?",
+          "hint": "Specific, tangible problems they face",
+          "placeholder": "e.g., Support team overwhelmed by repetitive questions\nWebsite visitors leaving without converting\nKnowledge scattered across tools and people",
+          "maxLength": 1000,
+          "mapsTo": "core_pains"
+        },
+        {
+          "id": "pain_severity",
+          "type": "slider",
+          "label": "How severe are these pains typically?",
+          "hint": "Are customers in acute pain or mild discomfort?",
+          "min": 1,
+          "max": 10,
+          "default": 7,
+          "labels": {
+            "left": "Mild Annoyance",
+            "right": "Critical Problem"
+          },
+          "mapsTo": "core_pains.severity"
+        },
+        {
+          "id": "hidden_costs",
+          "type": "textarea",
+          "label": "What hidden costs do these pains create?",
+          "hint": "Time, money, reputation, opportunity costs",
+          "placeholder": "e.g., $130K/year in support labor, lost deals from slow response times, employee burnout",
+          "maxLength": 500,
+          "mapsTo": "core_pains.costs"
+        }
+      ]
+    },
+    {
+      "id": "desires",
+      "title": "Desired Outcomes",
+      "questions": [
+        {
+          "id": "desired_outcomes",
+          "type": "textarea",
+          "label": "What outcomes do your customers want?",
+          "hint": "The transformation or results they're seeking",
+          "placeholder": "e.g., Instant answers to common questions\nMore booked calls from website visitors\nFaster employee onboarding",
+          "maxLength": 1000,
+          "mapsTo": "desired_outcomes"
+        },
+        {
+          "id": "success_metrics",
+          "type": "textarea",
+          "label": "How do they measure success?",
+          "hint": "Specific KPIs or metrics they care about",
+          "placeholder": "e.g., Support ticket deflection rate, time-to-resolution, customer satisfaction score, conversion rate",
+          "maxLength": 500,
+          "mapsTo": "desired_outcomes.metrics"
+        }
+      ]
+    },
+    {
+      "id": "objections",
+      "title": "Common Objections",
+      "questions": [
+        {
+          "id": "price_objection",
+          "type": "textarea",
+          "label": "How do prospects typically object about price?",
+          "hint": "Their exact words when pushing back on cost",
+          "placeholder": "e.g., \"This sounds expensive. We don't have $10K in the budget.\"",
+          "maxLength": 300,
+          "mapsTo": "objections_and_rebuttals.price.objection"
+        },
+        {
+          "id": "price_rebuttal",
+          "type": "textarea",
+          "label": "How do you typically respond to price objections?",
+          "hint": "Your proven reframe or calculation",
+          "placeholder": "e.g., \"Let's do the math: if you're handling 100 tickets/week at $25 each...\"",
+          "maxLength": 500,
+          "mapsTo": "objections_and_rebuttals.price.rebuttal"
+        },
+        {
+          "id": "other_objections",
+          "type": "textarea",
+          "label": "What other objections do you commonly hear?",
+          "hint": "List 2-4 other common pushbacks",
+          "placeholder": "e.g., \"We don't have bandwidth for this project\"\n\"What if it gives wrong answers?\"\n\"We tried a chatbot before and it failed\"",
+          "maxLength": 800,
+          "mapsTo": "objections_and_rebuttals"
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "title": "Customer Language",
+      "questions": [
+        {
+          "id": "customer_phrases",
+          "type": "textarea",
+          "label": "What phrases do your customers actually use?",
+          "hint": "The exact words they say when describing their problems",
+          "placeholder": "e.g., \"Support is killing us\"\n\"We answer the same questions all day\"\n\"Everything is in WhatsApp\"",
+          "maxLength": 800,
+          "mapsTo": "language_they_actually_use"
+        },
+        {
+          "id": "jargon_to_avoid",
+          "type": "textarea",
+          "label": "What jargon confuses your customers?",
+          "hint": "Technical terms they don't understand or use",
+          "placeholder": "e.g., RAG, embeddings, vector database, LLM",
+          "maxLength": 300,
+          "mapsTo": "jargon_to_avoid"
+        }
+      ]
+    },
+    {
+      "id": "fit_signals",
+      "title": "Fit Signals",
+      "questions": [
+        {
+          "id": "ideal_signals",
+          "type": "textarea",
+          "label": "What signals indicate someone is a great fit?",
+          "hint": "Red flags that predict success",
+          "placeholder": "e.g., Has a clear problem costing them money\nWilling to invest appropriately\nRealistic expectations about what's possible",
+          "maxLength": 600,
+          "mapsTo": "ideal_customer_signals"
+        },
+        {
+          "id": "not_a_fit",
+          "type": "textarea",
+          "label": "What signals indicate someone is NOT a fit?",
+          "hint": "Disqualifying characteristics",
+          "placeholder": "e.g., Looking for the cheapest option\nExpects guaranteed results\nUnrealistic timeline expectations",
+          "maxLength": 600,
+          "mapsTo": "not_a_fit"
+        },
+        {
+          "id": "buying_triggers",
+          "type": "textarea",
+          "label": "What events trigger a purchase decision?",
+          "hint": "Circumstances that make them ready to buy",
+          "placeholder": "e.g., Support backlog reaches breaking point\nLost a major deal due to slow response\nNew budget window opens",
+          "maxLength": 600,
+          "mapsTo": "buying_triggers"
+        }
+      ]
+    }
+  ]
+}

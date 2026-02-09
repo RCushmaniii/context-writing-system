@@ -1,0 +1,223 @@
+{
+  "_meta": {
+    "id": "claims-policy",
+    "title": "Claims Policy Survey",
+    "description": "Capture inputs for building a Claims Policy",
+    "targetProfile": "claims-policy.json",
+    "version": "1.0.0"
+  },
+  "sections": [
+    {
+      "id": "verified_claims",
+      "title": "Verified Claims",
+      "questions": [
+        {
+          "id": "verified_facts",
+          "type": "textarea",
+          "label": "What facts about your business are provably true today?",
+          "hint": "Experience, credentials, ratings, published results - things you can back up with evidence",
+          "placeholder": "e.g., 17 years Fortune 500 IT leadership\n5-star Google Business Profile rating\nPublished case studies with client permission",
+          "maxLength": 1000,
+          "mapsTo": "rules.claims_ladder[0].examples"
+        },
+        {
+          "id": "credentials",
+          "type": "textarea",
+          "label": "What credentials or certifications do you have?",
+          "hint": "Formal qualifications, certifications, degrees",
+          "placeholder": "e.g., AWS Solutions Architect, MBA, PMP, ISO 27001 familiarity",
+          "maxLength": 500,
+          "mapsTo": "rules.claims_ladder[0].examples"
+        }
+      ]
+    },
+    {
+      "id": "delivered_outcomes",
+      "title": "Delivered Outcomes",
+      "questions": [
+        {
+          "id": "past_results",
+          "type": "textarea",
+          "label": "What results have you delivered for past clients?",
+          "hint": "Specific outcomes with ranges (not point estimates). Only include work you personally delivered or supervised.",
+          "placeholder": "e.g., Reduced support ticket volume by 40-60% for similar clients\nDelivered chatbots handling 60-80% of Tier 1 inquiries\nClients typically see ROI within 6-12 months",
+          "maxLength": 1000,
+          "mapsTo": "rules.claims_ladder[1].examples"
+        },
+        {
+          "id": "case_study_permission",
+          "type": "choice",
+          "label": "Do you have permission to share specific client case studies?",
+          "options": [
+            {
+              "value": "yes_named",
+              "label": "Yes, with client names",
+              "description": "Can reference specific companies and results"
+            },
+            {
+              "value": "yes_anonymous",
+              "label": "Yes, anonymously",
+              "description": "Can share results without naming clients"
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "description": "Cannot share specific client results"
+            }
+          ],
+          "mapsTo": "rules.client_results_framework.permission"
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "What You Build & Deliver",
+      "questions": [
+        {
+          "id": "standard_deliverables",
+          "type": "textarea",
+          "label": "What do you include in every engagement?",
+          "hint": "Standard features, safeguards, or practices",
+          "placeholder": "e.g., Guardrails for hallucination mitigation\nRole-based access controls\nPost-launch iteration cycles\nDocumented data flows",
+          "maxLength": 800,
+          "mapsTo": "rules.claims_ladder[2].examples"
+        },
+        {
+          "id": "security_practices",
+          "type": "textarea",
+          "label": "What security practices do you follow?",
+          "hint": "Data handling, access controls, compliance considerations",
+          "placeholder": "e.g., Role-based access controls\nAudit logging\nData minimization\nClear retention policies",
+          "maxLength": 600,
+          "mapsTo": "rules.safe_replacements.security_privacy"
+        }
+      ]
+    },
+    {
+      "id": "banned_claims",
+      "title": "Claims to Avoid",
+      "questions": [
+        {
+          "id": "banned_absolutes",
+          "type": "textarea",
+          "label": "What absolute claims should you NEVER make?",
+          "hint": "Guarantees or promises that could backfire",
+          "placeholder": "e.g., no hallucinations, guaranteed ROI, zero data leaks, 100% uptime, never fails, always accurate",
+          "maxLength": 500,
+          "mapsTo": "rules.banned_absolutes"
+        },
+        {
+          "id": "competitor_claims",
+          "type": "textarea",
+          "label": "What competitive claims should you avoid?",
+          "hint": "Comparisons that could be seen as unprofessional",
+          "placeholder": "e.g., we're the best, competitors can't..., unlike other agencies...",
+          "maxLength": 300,
+          "mapsTo": "rules.competitive_positioning.banned"
+        }
+      ]
+    },
+    {
+      "id": "safe_language",
+      "title": "Safe Language Patterns",
+      "questions": [
+        {
+          "id": "accuracy_language",
+          "type": "textarea",
+          "label": "How should you talk about accuracy/quality?",
+          "hint": "Safe ways to describe reliability without guarantees",
+          "placeholder": "e.g., enterprise-grade guardrails, human-in-the-loop escalation, validated against ground truth, continuous evaluation",
+          "maxLength": 600,
+          "mapsTo": "rules.safe_replacements.accuracy"
+        },
+        {
+          "id": "performance_language",
+          "type": "textarea",
+          "label": "How should you talk about performance?",
+          "hint": "Safe ways to describe speed/efficiency",
+          "placeholder": "e.g., performance-first deployment, we validate page speed pre/post deployment, async loading with lazy initialization",
+          "maxLength": 600,
+          "mapsTo": "rules.safe_replacements.performance_seo"
+        },
+        {
+          "id": "roi_language",
+          "type": "textarea",
+          "label": "How should you talk about ROI/business impact?",
+          "hint": "Safe ways to describe value without guaranteeing results",
+          "placeholder": "e.g., clients typically recoup investment within X months, we measure deflection rate and customer satisfaction to quantify impact, your ROI depends on [factors]",
+          "maxLength": 600,
+          "mapsTo": "rules.safe_replacements.roi_business_impact"
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Metrics Policy",
+      "questions": [
+        {
+          "id": "kpis_to_track",
+          "type": "textarea",
+          "label": "What KPIs do you propose tracking for clients?",
+          "hint": "Metrics you can measure and report on",
+          "placeholder": "e.g., deflection rate, time-to-answer, CSAT, booked calls, cost-per-resolution",
+          "maxLength": 400,
+          "mapsTo": "rules.metrics_policy.allowed"
+        },
+        {
+          "id": "industry_benchmarks",
+          "type": "textarea",
+          "label": "What industry benchmarks can you reference? (with sources)",
+          "hint": "Third-party stats you can cite",
+          "placeholder": "e.g., Gartner reports 40-60% deflection for mature chatbot deployments\nForrester estimates X% of support queries are repetitive",
+          "maxLength": 500,
+          "mapsTo": "rules.metrics_policy.allowed"
+        }
+      ]
+    },
+    {
+      "id": "tone",
+      "title": "Tone Guidelines",
+      "questions": [
+        {
+          "id": "claims_tone",
+          "type": "choice",
+          "label": "What tone should claims have?",
+          "options": [
+            {
+              "value": "confident",
+              "label": "Confident and assertive",
+              "description": "Strong claims backed by evidence"
+            },
+            {
+              "value": "measured",
+              "label": "Measured and careful",
+              "description": "Conservative claims with clear caveats"
+            },
+            {
+              "value": "balanced",
+              "label": "Balanced",
+              "description": "Mix of confidence and appropriate humility"
+            }
+          ],
+          "mapsTo": "tone_guidance.voice"
+        },
+        {
+          "id": "tone_avoid",
+          "type": "multiselect",
+          "label": "What should the tone NEVER be?",
+          "minSelect": 1,
+          "maxSelect": 5,
+          "options": [
+            { "value": "hype", "label": "Hype-driven" },
+            { "value": "absolute", "label": "Absolute guarantees" },
+            { "value": "superlative", "label": "Unsubstantiated superlatives" },
+            { "value": "jargon", "label": "Heavy jargon" },
+            { "value": "aggressive", "label": "Aggressive competitor attacks" },
+            { "value": "vague", "label": "Vague promises" }
+          ],
+          "mapsTo": "tone_guidance.avoid"
+        }
+      ]
+    }
+  ]
+}

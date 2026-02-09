@@ -1,0 +1,243 @@
+{
+  "_meta": {
+    "id": "business-profile",
+    "title": "Business Profile Survey",
+    "description": "Capture inputs for building a Business Profile",
+    "targetProfile": "business-profile.json",
+    "version": "1.0.0"
+  },
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Business Identity",
+      "questions": [
+        {
+          "id": "business_name",
+          "type": "text",
+          "label": "What is your business name?",
+          "placeholder": "e.g., Acme Consulting",
+          "mapsTo": "business_name"
+        },
+        {
+          "id": "tagline",
+          "type": "text",
+          "label": "What is your tagline or one-liner?",
+          "hint": "A concise statement of what you do",
+          "placeholder": "e.g., Production-grade AI assistants for businesses tired of chatbot theater",
+          "mapsTo": "tagline"
+        },
+        {
+          "id": "positioning",
+          "type": "textarea",
+          "label": "How do you position your business?",
+          "hint": "2-3 sentences describing what you do and why it matters",
+          "placeholder": "e.g., I build AI assistants that actually work in production—handling real customer questions, reducing support load, and converting website visitors—without hallucination risks or performance disasters.",
+          "maxLength": 800,
+          "mapsTo": "positioning"
+        },
+        {
+          "id": "brand_perspective",
+          "type": "choice",
+          "label": "What perspective do you use in brand communications?",
+          "options": [
+            {
+              "value": "first_singular",
+              "label": "First person singular (I, my)",
+              "description": "Solo consultant or personal brand"
+            },
+            {
+              "value": "first_plural",
+              "label": "First person plural (We, our)",
+              "description": "Team or agency positioning"
+            },
+            {
+              "value": "third_person",
+              "label": "Third person (The company)",
+              "description": "Corporate positioning"
+            }
+          ],
+          "mapsTo": "brand_voice.perspective"
+        }
+      ]
+    },
+    {
+      "id": "offers",
+      "title": "Products & Services",
+      "questions": [
+        {
+          "id": "primary_offer",
+          "type": "textarea",
+          "label": "What is your primary offer?",
+          "hint": "Your main product or service",
+          "placeholder": "e.g., Clarity Sprint - A 3-5 day scoping engagement that produces a buildable plan before you commit serious budget",
+          "maxLength": 600,
+          "mapsTo": "offers[0]"
+        },
+        {
+          "id": "primary_price",
+          "type": "text",
+          "label": "What is the typical price for your primary offer?",
+          "placeholder": "e.g., $500, $5,000-$15,000, Starting at $10K",
+          "mapsTo": "offers[0].typical_pricing"
+        },
+        {
+          "id": "secondary_offers",
+          "type": "textarea",
+          "label": "What other offers do you have?",
+          "hint": "List other products, services, or packages",
+          "placeholder": "e.g., Implementation Package ($8K-$18K)\nMonthly Retainer ($1,500-$4,000/mo)\nTraining Workshop ($2,500)",
+          "maxLength": 1000,
+          "mapsTo": "offers"
+        },
+        {
+          "id": "pricing_model",
+          "type": "choice",
+          "label": "What is your primary pricing model?",
+          "options": [
+            {
+              "value": "fixed_project",
+              "label": "Fixed project pricing",
+              "description": "Set price for defined scope"
+            },
+            {
+              "value": "hourly",
+              "label": "Hourly billing",
+              "description": "Charge by time spent"
+            },
+            {
+              "value": "retainer",
+              "label": "Monthly retainer",
+              "description": "Ongoing relationship with recurring fee"
+            },
+            {
+              "value": "value_based",
+              "label": "Value-based pricing",
+              "description": "Price based on outcome delivered"
+            },
+            {
+              "value": "subscription",
+              "label": "Subscription",
+              "description": "Recurring product access fee"
+            }
+          ],
+          "mapsTo": "pricing_philosophy.model"
+        }
+      ]
+    },
+    {
+      "id": "differentiators",
+      "title": "Differentiation",
+      "questions": [
+        {
+          "id": "why_you",
+          "type": "textarea",
+          "label": "Why should someone choose you over alternatives?",
+          "hint": "Your unique value proposition",
+          "placeholder": "e.g., Fortune 500 discipline without enterprise bureaucracy. 17 years of execution experience applied to SMB budgets.",
+          "maxLength": 600,
+          "mapsTo": "why_robert.narrative"
+        },
+        {
+          "id": "differentiators",
+          "type": "textarea",
+          "label": "What specific things do you do differently?",
+          "hint": "List 3-5 concrete differentiators with proof",
+          "placeholder": "e.g., Clarity before tools - I won't recommend a solution until I understand your problem\nProduction-grade by default - Every build includes guardrails and monitoring",
+          "maxLength": 1000,
+          "mapsTo": "how_im_different"
+        },
+        {
+          "id": "proof_points",
+          "type": "textarea",
+          "label": "What proof points support your credibility?",
+          "hint": "Experience, results, credentials, testimonials",
+          "placeholder": "e.g., 17 years Fortune 500 IT leadership\n8 years profitable solopreneur\n5-star client reviews",
+          "maxLength": 800,
+          "mapsTo": "why_robert.proof_points"
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery Model",
+      "questions": [
+        {
+          "id": "delivery_approach",
+          "type": "textarea",
+          "label": "How do you deliver your services?",
+          "hint": "Your process, methodology, or workflow",
+          "placeholder": "e.g., English-first project management for speed. Fixed-scope engagements with clear milestones. Direct access to senior expertise throughout.",
+          "maxLength": 600,
+          "mapsTo": "delivery_model"
+        },
+        {
+          "id": "timeline_typical",
+          "type": "text",
+          "label": "What is your typical project timeline?",
+          "placeholder": "e.g., 4-8 weeks for implementation",
+          "mapsTo": "offers[0].duration"
+        },
+        {
+          "id": "payment_terms",
+          "type": "text",
+          "label": "What are your typical payment terms?",
+          "placeholder": "e.g., 50% upfront, 50% on delivery",
+          "mapsTo": "pricing_philosophy.payment_terms"
+        }
+      ]
+    },
+    {
+      "id": "competitive",
+      "title": "Competitive Positioning",
+      "questions": [
+        {
+          "id": "vs_alternatives",
+          "type": "textarea",
+          "label": "How do you compare to common alternatives?",
+          "hint": "Other solutions prospects might consider",
+          "placeholder": "e.g., vs Agencies: No account managers, you work directly with me\nvs Freelancers: I bring enterprise governance discipline\nvs DIY: You get a proven system, not a science project",
+          "maxLength": 800,
+          "mapsTo": "competitive_positioning"
+        },
+        {
+          "id": "not_for",
+          "type": "textarea",
+          "label": "Who is NOT a good fit for your services?",
+          "hint": "Customers you explicitly don't serve well",
+          "placeholder": "e.g., Companies looking for the cheapest option\nTeams expecting fully autonomous AI with no oversight\nClients who view consultants as vendors to squeeze on price",
+          "maxLength": 500,
+          "mapsTo": "not_a_fit_if"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "title": "Call to Action",
+      "questions": [
+        {
+          "id": "primary_cta",
+          "type": "text",
+          "label": "What is your primary call to action?",
+          "placeholder": "e.g., Book a free 20-minute Clarity Call",
+          "mapsTo": "cta.primary"
+        },
+        {
+          "id": "cta_promise",
+          "type": "textarea",
+          "label": "What do people get from taking this action?",
+          "hint": "The promise or outcome of responding to your CTA",
+          "placeholder": "e.g., We'll diagnose your situation, identify if AI is the right move, and outline next steps. No pitch deck. No commitment.",
+          "maxLength": 300,
+          "mapsTo": "cta.promise"
+        },
+        {
+          "id": "booking_url",
+          "type": "text",
+          "label": "What is your booking or contact URL?",
+          "placeholder": "e.g., https://calendly.com/your-name",
+          "mapsTo": "cta.booking_url"
+        }
+      ]
+    }
+  ]
+}

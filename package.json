@@ -1,0 +1,12 @@
+{
+  "name": "context-writing-system",
+  "version": "2.1.0",
+  "description": "AI writing system with context engineering",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": ["writing", "ai", "context-engineering"],
+  "author": "",
+  "license": "ISC"
+}

@@ -17,9 +17,59 @@
           <li><a href="/viewer-prompts/index.html">Prompts</a></li>
           <li><a href="/viewer-skills/index.html">Skills</a></li>
           <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-trigger" aria-expanded="false">
+              Surveys
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown-menu" role="menu">
+              <li><a href="/viewer-survey/voice-discovery.html">Voice Discovery</a></li>
+              <li><a href="/viewer-survey/icp-discovery.html">ICP Discovery</a></li>
+              <li><a href="/viewer-survey/business-profile.html">Business Profile</a></li>
+              <li><a href="/viewer-survey/claims-policy.html">Claims Policy</a></li>
+            </ul>
+          </li>
         </ul>
+        <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
     </nav>
+
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="/index.html" class="nav-brand">Writing System</a>
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-menu-nav">
+        <ul>
+          <li><a href="/system/index.html">System</a></li>
+          <li><a href="/viewer-context/index.html">Context</a></li>
+          <li><a href="/viewer-prompts/index.html">Prompts</a></li>
+          <li><a href="/viewer-skills/index.html">Skills</a></li>
+          <li><a href="/viewer-knowledge/index.html">Knowledge</a></li>
+        </ul>
+        <div class="mobile-menu-section">Surveys</div>
+        <ul class="submenu">
+          <li><a href="/viewer-survey/voice-discovery.html">Voice Discovery</a></li>
+          <li><a href="/viewer-survey/icp-discovery.html">ICP Discovery</a></li>
+          <li><a href="/viewer-survey/business-profile.html">Business Profile</a></li>
+          <li><a href="/viewer-survey/claims-policy.html">Claims Policy</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <main class="main-content">
       <div class="content-text">
@@ -106,6 +156,19 @@
             </p>
             <p class="text-muted">
               <strong>Categories:</strong> Gold-standard, templates, drafts, notes
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <a href="/viewer-survey/index.html">Surveys</a>
+            </h3>
+            <p>
+              Interactive surveys with sliders, checkboxes, and text inputs for gathering context profile inputs.
+              Auto-saves progress and exports to JSON.
+            </p>
+            <p class="text-muted">
+              <strong>Surveys:</strong> Voice Discovery, ICP, Business Profile, Claims Policy
             </p>
           </div>
         </div>
